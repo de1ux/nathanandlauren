@@ -1,0 +1,116 @@
+.media {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+html, body {
+    height: 1200px;
+    background: radial-gradient(rgb(251, 251, 251), rgb(241, 239, 240));
+
+}
+
+.super-fancy-text {
+    color: rgb(96, 94, 95);
+    font-size: 88px;
+    font-family: 'Alex Brush', cursive;
+    line-height: 95px;
+    display: inline-block;
+}
+
+.dry-erase-marker {
+    color: rgb(236, 188, 84);
+    font-size: 88px;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 57px;
+    line-height: 90px;
+    display: inline-block;
+}
+
+#header {
+    text-align: center;
+    padding-top: 115px;
+    cursor: pointer;
+}
+
+.decorative-thing {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0px;
+    width: 400px;
+    height: auto;
+}
+
+#menu {
+    margin: 0;
+    padding: 40px 0 40px 22px;
+    text-align: center;
+}
+
+#menu li {
+    display: inline-block;
+}
+
+#menu li a:hover {
+    color: rgb(62, 144, 237);
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(62, 144, 237);
+}
+
+#menu li a {
+    font-size: 25px;
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    font-family: 'Alex Brush', cursive;
+    text-decoration: none;
+    margin: 0 20px 0 0;
+    border-bottom: 1px solid rgb(96, 94, 95);
+}
+
+.description-text {
+    width: 100%;
+    padding-top: 25px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.image-sidebar {
+    position: absolute;
+    left: 0;
+    width: 10px;
+}
+
+.inactive {
+    color: rgb(96, 94, 95);
+}
+
+.active {
+    color: rgb(62, 144, 237);
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(62, 144, 237);
+}
+
+.container {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    max-width: 80%;
+}
+
+.container h1 {
+    font-family: 'Alex Brush', cursive;
+}
+
+.container p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+}

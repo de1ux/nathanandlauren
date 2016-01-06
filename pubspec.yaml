@@ -1,0 +1,9 @@
+name: nathanandlauren
+version: 0.0.1
+description: >
+  A simple wedding site and blog for
+  Nathan and Lauren Evans
+homepage: http://nathanandlauren.com
+dependencies:
+  browser: any
+  react: any
