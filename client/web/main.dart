@@ -1,12 +1,6 @@
+import "package:react/react.dart" as react;
+import "package:react/react_client.dart";
 import "dart:html";
-import 'package:react/react_client.dart' as reactClient;
-import 'package:react/react.dart' as react;
-
-void main() {
-    reactClient.setClientConfiguration();
-    var output = querySelector("#fancy-image-picker");
-    react.render(FancyImagePicker({}), output);
-}
 
 int pictureCount = 5;
 List<String> descriptions = [
@@ -17,9 +11,6 @@ List<String> descriptions = [
     "Collecting the first christmas tree in 2013",
 ];
 
-// make images 1k in width, height can go screw itself lulz
-
-var FancyImagePicker = react.registerComponent(() => new _FancyImagePicker());
 class _FancyImagePicker extends react.Component {
 
     int get imageIndex => state["imageIndex"];
@@ -32,7 +23,29 @@ class _FancyImagePicker extends react.Component {
         };
     }
 
-    react.ReactElement render() {
+    List getImageThumbnails() {
+        List thumbnails = new List();
+        for (var i = 0; i < pictureCount; i++) {
+            thumbnails.add(
+                react.img({
+                    "src": "images/thumb/${i}.jpg", "className": "thumbnail",
+                    "onClick": selectImage,
+                    "id": "${i}"
+                })
+            );
+        }
+        return thumbnails;
+    }
+
+    void selectImage(e) {
+        int i = int.parse(e.target.id);
+        setState({
+            "imageIndex": i,
+            "imageDescription": descriptions[i]
+        });
+    }
+
+    render() {
         // Thumbnails that allow changing the image in the viewport
         var thumbs = getImageThumbnails();
 
@@ -48,29 +61,11 @@ class _FancyImagePicker extends react.Component {
             }, imageDescription)
         ]);
     }
-
-    List<react.ReactElement> getImageThumbnails() {
-        List thumbnails = new List();
-        for (var i = 0; i < pictureCount; i++) {
-            thumbnails.add(
-                react.img({
-                    "src": "images/thumb/${i}.jpg", "className": "thumbnail",
-                    "onClick": selectImage,
-                    "id": "${i}"
-                })
-            );
-        }
-        return thumbnails;
-    }
-
-    void selectImage(SyntheticMouseEvent e) {
-        int i = int.parse(e.target.id);
-        setState({
-            "imageIndex": i,
-            "imageDescription": descriptions[i]
-        });
-    }
 }
 
+var FancyImagePicker = react.registerComponent(() => new _FancyImagePicker());
 
-
+void main() {
+    setClientConfiguration();
+    react.render(FancyImagePicker({}), querySelector("#fancy-image-picker"));
+}

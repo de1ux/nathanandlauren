@@ -104,6 +104,8 @@ html, body {
     margin-left: auto;
     padding: 0;
     max-width: 80%;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .container h1 {
@@ -113,4 +115,36 @@ html, body {
 .container p {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
+}
+
+.required {
+    color: red;
+}
+
+#footer {
+    color: rgba(0, 0, 0, 0.53);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+}
+
+.submitted {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.submit-button {
+    font-size: 20px;
+}
+
+.error-message {
+    color: red;
+}
+
+#map {
+    height: 100%;
+    margin: 0px;
+    padding: 0px
 }
