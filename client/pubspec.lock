@@ -16,4 +16,4 @@ packages:
   react:
     description: react
     source: hosted
-    version: "0.8.4"
+    version: "0.8.7"

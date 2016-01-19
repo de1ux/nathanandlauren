@@ -1,3 +1,11 @@
 packages/
+*/packages
 .packages
 */build/*
+*/keys.go
+.DS_Store
+*/.DS_Store
+client/pubspec.lock
+client/web/images/thumb/packages
+client/web/images/full/packages
+server/nathanandlauren

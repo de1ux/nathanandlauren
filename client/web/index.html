@@ -2,7 +2,16 @@
 
 <!--
 
-  Welcome! Thanks for checking out our wedding page.
+  Welcome! Thanks for checking out our wedding site.
+
+  This project is hosted at git@github.com:de1ux/nathanandlauren
+
+  Fun facts about development
+  1. no bootstrap.js, just a lot of google search copy/paste to make the layout resize on mobile. sorry IE users, didn't do much for you :(
+  2. all images (except the Amazon logo in the registy) are royalty-free
+  3. only two fonts are pulled in, the rest are browser defaults
+  4. mailgun sends us notifications of new rsvps through a backend running on ec2
+  5. the frontend is being served from an s3 bucket
 
   -Nathan &#x222a; Lauren
 
@@ -30,15 +39,13 @@
 
     <ul id="menu">
       <li><a class="inactive" href="/rsvp.html">rvsp</a></li>
+      <li><a class="inactive" href="/ceremony.html">ceremony</a></li>
       <li><a class="inactive" href="/lodging.html">lodging</a></li>
       <li><a class="inactive" href="/travel.html">travel</a></li>
       <li><a class="inactive" href="/registry.html">registry</a></li>
     </ul>
 
-
-    <div id="fancy-image-picker"></div>
-
-    <div id="about-us">
+     <div id="about-us">
       <div class="container">
       <h1>
         the couple
@@ -47,18 +54,26 @@
       Lauren and Siri moved from Western Washington to Montana in 2013 to pursue her Masters degree in Statistics. As a hoofed mammal enthusiast, she enjoys training a 3/4 yr old "Significantly Fancy" paint horse, Alex.
       </p>
       <p>
-      Nathan moved from Arkansas to Montana in 2012 to pursue a career in software development. He likes programming easter eggs and the feeling of wearing a brand new sleeveless t-shirt during Sunday afternoon NASCAR.
+      Nathan moved from Arkansas to Montana in 2012 to pursue a career in software development. He likes programming easter eggs and riding his motorcycle.
       </p>
       <p>
-      The couple originally met eachother at a dog park in September of 2013.
+      The couple originally met each other at a dog park in September of 2013. Shortly after they were inseparable. They enjoy going for long quad rides in the mountains and collecting pets.
+      <br /><br />
+      On December 26 of 2014 Nathan took Lauren on a walk and proposed with the dogs as witnesses. They are beyond excited to be tying the knot and hope you will celebrate with them!
       </p>
       </div>
     </div>
+    <br />
+    <br />
 
+    <div id="fancy-image-picker">
+      <img src="images/loading.gif" class="media" />
+    </div>
+    <div id="footer">Made with love by Nathan &amp; Lauren</div>
 
-    <script async src="packages/react/react.js"></script>
-    <script async type="application/dart" src="main.dart"></script>
-    <script async src="packages/browser/dart.js"></script>
+    <script src="packages/react/react.js"></script>
+    <script type="application/dart" src="main.dart"></script>
+    <script src="packages/browser/dart.js"></script>
   </body>
 </html>
 
